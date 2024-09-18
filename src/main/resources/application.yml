@@ -1,0 +1,61 @@
+
+server:
+  port: 8881
+
+spring:
+  application:
+    name: y-viet
+    title: Admin Service
+    version: 1.0
+    # config Entity to Snake_case in database
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://dpg-crha9ad6l47c73c51cg0-a.singapore-postgres.render.com/y_viet_clinic
+    username: y_viet_clinic_user
+    password: PRKjzlyjigufQR8fQ5HWxdwLmKgjEbcH
+
+    jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+      open-in-view: false
+
+    mail:
+      host: smtp.gmail.com
+      port: 587
+      username: toannguyen.hcmute@gmail.com
+      password: 'lenw viwd kpnm ckcv'  # Nh?p App Password v?o ??y
+      properties:
+        mail:
+          smtp:
+            auth: true
+            starttls:
+              enable: true
+          debug: true
+
+jwt:
+  secretKey: hRy6mNjtLlBQyweNShjaj/PR7xu6sib9ISwZgu6alivZLc00hEp4mbAXPsxLc6se
+  expiration: 86400000
+
+#config swagger
+openapi:
+  service:
+    api-docs: api-service
+    server: http://localhost:8080
+    title: API Service
+    version: 1.0.0
+
+application:
+  title: Y Viet - Clinic Service
+  version: 1.0.0
+
+springdoc:
+  pathsToMatch: /v1, /api/balance/**
