@@ -1,6 +1,6 @@
 package com.yviet.app.admin.y_viet_admin.entity.medical_standard;
 
-import com.yviet.app.admin.y_viet_admin.entity.BaseEntity;
+import com.yviet.app.admin.y_viet_admin.entity.BaseLongEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -16,7 +16,7 @@ import lombok.experimental.FieldDefaults;
 @Setter
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class LabTestIndication extends BaseEntity {
+public class LabTestIndication extends BaseLongEntity {
 
     @Column(nullable = false,name = "name_vi")
     String nameVi;

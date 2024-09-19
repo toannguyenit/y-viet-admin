@@ -1,6 +1,6 @@
 package com.yviet.app.admin.y_viet_admin.entity.clinic;
 
-import com.yviet.app.admin.y_viet_admin.entity.BaseEntity;
+import com.yviet.app.admin.y_viet_admin.entity.BaseLongEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -16,7 +16,7 @@ import lombok.experimental.FieldDefaults;
 @Setter
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Clinic_Setting extends BaseEntity {
+public class Clinic_Setting extends BaseLongEntity {
     @Column(nullable = false)
     String name_vi;
 

@@ -1,4 +1,4 @@
-package com.yviet.app.admin.y_viet_admin.entity.address;
+package com.yviet.app.admin.y_viet_admin.entity.admin_type;
 
 import com.yviet.app.admin.y_viet_admin.entity.BaseLongEntity;
 import jakarta.persistence.Column;
@@ -11,16 +11,12 @@ import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
 @Entity
-@Table(name = "District")
+@Table(name = "admin_type")
 @Getter
 @Setter
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class District extends BaseLongEntity {
-
-    @Column(nullable = false,name = "city_id")
-    String cityId;
-
+public class AdminType extends BaseLongEntity {
     @Column(nullable = false)
     String code;
 
@@ -36,4 +32,6 @@ public class District extends BaseLongEntity {
     @Column(nullable = false,name = "description_en")
     String descriptionEn;
 
+    @Column(nullable = false,name = "type")
+    String type;
 }

@@ -43,6 +43,7 @@ public interface ApiPath {
     String FORGOT_PASSWORD = "/forgot-password";
     String REFRESH_TOKEN = "/refresh-token";
 
+
     String BASE_API_URL = "/api/v1";
 
     // User
@@ -73,4 +74,9 @@ public interface ApiPath {
 
     // Report
     String REPORT_API = BASE_API_URL + "/report";
+
+    // -------------------------------------------------------------------------------
+    // admin
+    String ADMIN_API = BASE_API_URL + "/admin";
+
 }

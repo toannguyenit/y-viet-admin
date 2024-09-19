@@ -1,7 +1,7 @@
 package com.yviet.app.admin.y_viet_admin.entity.address;
 
 
-import com.yviet.app.admin.y_viet_admin.entity.BaseEntity;
+import com.yviet.app.admin.y_viet_admin.entity.BaseLongEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -17,7 +17,7 @@ import lombok.experimental.FieldDefaults;
 @Setter
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Ward extends BaseEntity {
+public class Ward extends BaseLongEntity {
 
     @Column(nullable = false,name = "district_id")
     String districtId;
