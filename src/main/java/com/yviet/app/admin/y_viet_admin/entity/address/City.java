@@ -3,6 +3,7 @@ package com.yviet.app.admin.y_viet_admin.entity.address;
 import com.yviet.app.admin.y_viet_admin.entity.BaseLongEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.Getter;

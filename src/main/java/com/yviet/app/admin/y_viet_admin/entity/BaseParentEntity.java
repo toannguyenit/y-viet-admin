@@ -16,11 +16,6 @@ import java.time.LocalDateTime;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public abstract class BaseParentEntity implements Serializable {
 
-
-    @Id
-    @UuidGenerator
-    String id;
-
     @Column(nullable = false, updatable = false)
     LocalDateTime createdAt;
 
@@ -34,4 +29,5 @@ public abstract class BaseParentEntity implements Serializable {
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
     }
+
 }
