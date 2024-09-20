@@ -30,4 +30,5 @@ public abstract class BaseParentEntity implements Serializable {
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
     }
+
 }

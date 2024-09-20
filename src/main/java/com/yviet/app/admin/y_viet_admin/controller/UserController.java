@@ -20,7 +20,7 @@ public class UserController {
     }
 
     @GetMapping("/demo")
-    @PreAuthorize("hasAuthority('Admin')")
+    @PreAuthorize("hasAuthority('Admins')")
     public String demo() {
         return "demo";
     }

@@ -30,7 +30,6 @@ public interface ApiPath {
 
 
     // Authenticate APIs
-    String LOGIN = "/login";
     String LOGOUT = "/logout";
     String SIGN_UP = "/sign-up";
     String RESET_PASSWORD = "/reset-password";
@@ -78,5 +77,6 @@ public interface ApiPath {
     // -------------------------------------------------------------------------------
     // admin
     String ADMIN_API = BASE_API_URL + "/admin";
+    String LOGIN = "/login";
 
 }
