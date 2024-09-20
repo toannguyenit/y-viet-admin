@@ -15,7 +15,7 @@ public abstract class BaseLongEntity extends BaseParentEntity implements Seriali
     private static final long serialVersionUID = 1L;
 
     @Id
-    @UuidGenerator
+    @GeneratedValue
     Long id;
 
     @PrePersist
@@ -27,3 +27,4 @@ public abstract class BaseLongEntity extends BaseParentEntity implements Seriali
         setCreatedAt(LocalDateTime.now());
     }
 }
+

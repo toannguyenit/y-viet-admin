@@ -23,6 +23,6 @@ public abstract class BaseStringEntity extends BaseParentEntity implements Seria
         if (id == null) {
             id = UniqueID.getUUID();
         }
-        setCreatedAt(LocalDateTime.now());
+        super.onCreate();
     }
 }
