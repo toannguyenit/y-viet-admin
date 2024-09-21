@@ -5,9 +5,6 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
-import org.hibernate.annotations.UuidGenerator;
-
-import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
