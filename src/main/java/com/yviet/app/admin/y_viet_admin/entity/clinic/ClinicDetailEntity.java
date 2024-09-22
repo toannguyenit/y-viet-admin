@@ -1,6 +1,8 @@
 package com.yviet.app.admin.y_viet_admin.entity.clinic;
 
+import com.yviet.app.admin.y_viet_admin.entity.BaseLongEntity;
 import com.yviet.app.admin.y_viet_admin.entity.BaseParentEntity;
+import com.yviet.app.admin.y_viet_admin.entity.BaseStringEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -10,9 +12,10 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.annotations.UuidGenerator;
 
 @Entity
-@Table(name = "clinic_detail")
+@Table(name = "tbl_clinic_details")
 @Getter
 @Setter
 @ToString

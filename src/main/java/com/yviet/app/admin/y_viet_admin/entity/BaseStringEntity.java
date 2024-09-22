@@ -25,7 +25,6 @@ public abstract class BaseStringEntity extends BaseParentEntity implements Seria
     @UuidGenerator
     String id;
 
-    @PrePersist
     protected void onCreate() {
 
         if (id == null) {

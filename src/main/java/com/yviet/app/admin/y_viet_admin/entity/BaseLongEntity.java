@@ -23,7 +23,7 @@ public abstract class BaseLongEntity extends BaseParentEntity implements Seriali
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
-    @PrePersist
+    @Override
     protected void onCreate() {
 
         if (id == null) {

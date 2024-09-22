@@ -79,4 +79,8 @@ public interface ApiPath {
     String ADMIN_API = BASE_API_URL + "/admin";
     String LOGIN = "/login";
 
+    // clinic
+    String CLINIC_API = BASE_API_URL + "/clinic";
+
+
 }
