@@ -21,8 +21,6 @@ public class ClinicDetailImpl implements ClinicDetailService {
     @Override
     public Optional<String> create(ClinicDetailEntity t) {
 
-        System.err.println(t);
-        clinicDetailRepository.save(t);
         return Optional.of("Successfully created");
     }
 
@@ -33,6 +31,11 @@ public class ClinicDetailImpl implements ClinicDetailService {
 
     @Override
     public Optional<String> delete(String id) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<?> updateInfor(String id, Integer integer) {
         return Optional.empty();
     }
 }

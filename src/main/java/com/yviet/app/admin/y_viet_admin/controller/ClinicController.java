@@ -19,6 +19,26 @@ public class ClinicController {
     @Autowired
     ResponseUtil responseUtil;
 
+    @GetMapping()
+    public ResponseEntity<RestAPIResponse<Object>> getAllClinic() {
+        return responseUtil.successResponse(
+                clinicService.findAll()
+        );
+    }
+
+    @GetMapping(ApiPath.ID)
+    public ResponseEntity<RestAPIResponse<Object>> getClinicByid(@PathVariable(value = "id") String id) {
+        return responseUtil.successResponse(
+                clinicService.findById(id)
+        );
+    }
+
+    @PutMapping(ApiPath.ID)
+    public ResponseEntity<RestAPIResponse<Object>> updateClinic(@PathVariable(value = "id") String id,@RequestBody ClinicCreateRequest clinicCreateRequest) {
+        return responseUtil.successResponse(
+                clinicService.updateInfor(id, clinicCreateRequest)
+        );
+    }
 
     @PostMapping()
     public ResponseEntity<RestAPIResponse<Object>> createClinic(@RequestBody ClinicCreateRequest clinicCreateRequest) {
@@ -26,4 +46,13 @@ public class ClinicController {
                 clinicService.create(clinicCreateRequest)
         );
     }
+
+    @DeleteMapping(ApiPath.ID)
+    public ResponseEntity<RestAPIResponse<Object>> deleteClinic(@PathVariable(value = "id") String id) {
+        return responseUtil.successResponse(
+                clinicService.delete(id)
+        );
+    }
+
+
 }

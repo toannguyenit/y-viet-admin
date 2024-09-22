@@ -9,13 +9,17 @@ import com.yviet.app.admin.y_viet_admin.exception.AppException;
 import com.yviet.app.admin.y_viet_admin.exception.ErrorCode;
 import com.yviet.app.admin.y_viet_admin.mapper.admin.AdminUserMapper;
 import com.yviet.app.admin.y_viet_admin.repository.admin_user.AdminUserRepository;
+import org.springframework.beans.BeanWrapper;
+import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class AdminUserServiceImpl implements AdminUserService {
@@ -57,6 +61,11 @@ public class AdminUserServiceImpl implements AdminUserService {
     }
 
     @Override
+    public Optional<?> updateInfor(String id, Integer integer) {
+        return Optional.empty();
+    }
+
+    @Override
     public String login(LoginRequest loginRequest) throws Exception {
 
         AdminUserEntity user = adminUserRepository.findByUsername(loginRequest.getUsername())
@@ -66,4 +75,6 @@ public class AdminUserServiceImpl implements AdminUserService {
         }
         throw new AppException(ErrorCode.INVALID_ACCOUNT);
     }
+
+
 }
