@@ -15,7 +15,7 @@ public interface ClinicRepository extends JpaRepository<ClinicEntity, String>, J
 
     @Query(value = "select tc.name_en as nameEn, tc.name_vi as nameVi, tc.status as status, " +
             "tcd.url_logo as urlLogo, tcd.address as address, tcd.phone_number as phoneNumber " +
-            "from tbl_clinic tc join tbl_clinic_details tcd " +
+            "from clinic tc join clinic_details tcd " +
             "on tc.id = tcd.clinic_id " +
             "where tc.is_deleted = 0", nativeQuery = true)
     Optional<List<ClinicGetResponse>> findAllClinics();
@@ -23,7 +23,7 @@ public interface ClinicRepository extends JpaRepository<ClinicEntity, String>, J
 
     @Query(value = "select tc.name_en as nameEn, tc.name_vi as nameVi, tc.status as status, " +
             "tcd.url_logo as urlLogo, tcd.address as address, tcd.phone_number as phoneNumber " +
-            "from tbl_clinic tc join tbl_clinic_details tcd " +
+            "from clinic tc join clinic_details tcd " +
             "on tc.id = tcd.clinic_id " +
             "where tc.is_deleted = 0 and tc.id = ?1", nativeQuery = true)
     Optional<ClinicGetResponse> findByIdClinic(String id);

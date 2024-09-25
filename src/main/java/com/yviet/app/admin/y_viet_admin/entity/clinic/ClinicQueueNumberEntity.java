@@ -14,7 +14,7 @@ import lombok.experimental.FieldDefaults;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tbl_clinic_queue_number")
+@Table(name = "clinic_queue_number")
 @Getter
 @Setter
 @ToString

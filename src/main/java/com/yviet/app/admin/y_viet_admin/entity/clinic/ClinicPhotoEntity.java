@@ -12,7 +12,7 @@ import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
 @Entity
-@Table(name = "tbl_clinic_detail")
+@Table(name = "clinic_photo")
 @Getter
 @Setter
 @ToString

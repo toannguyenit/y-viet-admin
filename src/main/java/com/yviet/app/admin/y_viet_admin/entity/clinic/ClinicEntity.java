@@ -11,7 +11,7 @@ import lombok.experimental.FieldDefaults;
 import org.hibernate.annotations.UuidGenerator;
 
 @Entity
-@Table(name = "tbl_clinic")
+@Table(name = "clinic")
 @Getter
 @Setter
 @ToString

@@ -40,7 +40,6 @@ public class ClinicImpl implements ClinicService {
         ClinicEntity clinicEntity = clinicRepository.save(clinicMapper.toClinicEntity(t));
 
         // add clinic detail
-
         ClinicDetailEntity clinicDetailEntity = clinicMapper.toClinicDetailEntity(t);
         clinicDetailEntity.setClinicId(clinicEntity.getId());
         clinicDetailService.create(clinicDetailEntity);

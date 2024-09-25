@@ -20,7 +20,7 @@ public class ClinicDetailImpl implements ClinicDetailService {
 
     @Override
     public Optional<String> create(ClinicDetailEntity t) {
-
+        clinicDetailRepository.save(t);
         return Optional.of("Successfully created");
     }
 
