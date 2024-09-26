@@ -25,4 +25,9 @@ public class RedisImpl implements RedisService<String>{
     public void deleteData(String key) {
         redisTemplate.delete(key);
     }
+
+    @Override
+    public boolean isDataExists(String key) {
+        return redisTemplate.hasKey(key);
+    }
 }

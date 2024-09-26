@@ -12,4 +12,7 @@ public interface RedisService<T> {
 
     // Delete data from Redis
     void deleteData(T key);
+
+    // Check if data exists in Redis
+    boolean isDataExists(String key);
 }
