@@ -30,7 +30,6 @@ public interface ApiPath {
 
 
     // Authenticate APIs
-    String LOGIN = "/login";
     String LOGOUT = "/logout";
     String SIGN_UP = "/sign-up";
     String RESET_PASSWORD = "/reset-password";
@@ -42,6 +41,7 @@ public interface ApiPath {
     String SIGNUP_VERIFY = "/signup-verify";
     String FORGOT_PASSWORD = "/forgot-password";
     String REFRESH_TOKEN = "/refresh-token";
+
 
     String BASE_API_URL = "/api/v1";
 
@@ -73,4 +73,14 @@ public interface ApiPath {
 
     // Report
     String REPORT_API = BASE_API_URL + "/report";
+
+    // -------------------------------------------------------------------------------
+    // admin
+    String ADMIN_API = BASE_API_URL + "/admin";
+    String LOGIN = "/login";
+
+    // clinic
+    String CLINIC_API = BASE_API_URL + "/clinic";
+
+
 }

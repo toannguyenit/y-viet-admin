@@ -5,7 +5,13 @@ import lombok.Getter;
 
 @Getter
 public enum ErrorCode {
+    // y viet
 
+    INVALID_ACCOUNT(RestAPIStatus.BAD_REQUEST,-1,"Invalid username or password","Bad Request","Tên người dùng hoặc mật khẩu không hợp lệ"),
+    CLINIC_NOT_EXIST(RestAPIStatus.NOT_FOUND , -111,"Clinic Not Exist","Not Found","Clinic không tìm thấy"),
+
+
+    // -------------
     OK(RestAPIStatus.OK,1200,"Success","OK","Thành công"),
 
     INVALID_KEY(RestAPIStatus.BAD_REQUEST,-100,"Invalid input object type!","Bad Request","Dữ liệu đầu vào không hợp lệ"),

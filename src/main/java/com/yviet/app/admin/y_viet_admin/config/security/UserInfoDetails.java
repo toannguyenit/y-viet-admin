@@ -1,6 +1,7 @@
 package com.yviet.app.admin.y_viet_admin.config.security;
 
 
+import com.yviet.app.admin.y_viet_admin.dto.request.admin_user.LoginRequest;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -23,25 +24,21 @@ public class UserInfoDetails implements UserDetails {
         authorities.add(new SimpleGrantedAuthority("Admin"));
     }
 
-//    public UserInfoDetails(UserEntity userInfo) {
-//        username = userInfo.getEmail();
-//        password = userInfo.getPassword();
+    public UserInfoDetails(LoginRequest userInfo) {
+        username = userInfo.getUsername();
+        password = userInfo.getPassword();
+
+        authorities = new ArrayList<GrantedAuthority>();
+       if(username.equals("admin")) {
+           authorities.add(new SimpleGrantedAuthority("Admins"));
+       }
+//        authorities =  List.of(userInfo.getRoles().split(","))
+//                .stream()
+//                .map(SimpleGrantedAuthority::new)
+//                .collect(Collectors.toList());
 //
-//        authorities = new ArrayList<GrantedAuthority>();
-//        if (userInfo.getRoleId() == 1) {
-//            authorities.add(new SimpleGrantedAuthority(Authorities.Admin.name()));
-//        } else if (userInfo.getRoleId() == 2) {
-//            authorities.add(new SimpleGrantedAuthority(Authorities.Doctor.name()));
-//        } else {
-//            authorities.add(new SimpleGrantedAuthority(Authorities.Patient.name()));
-//        }
-////        authorities =  List.of(userInfo.getRoles().split(","))
-////                .stream()
-////                .map(SimpleGrantedAuthority::new)
-////                .collect(Collectors.toList());
-////
-////        System.err.println(authorities);
-//    }
+//        System.err.println(authorities);
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

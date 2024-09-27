@@ -2,6 +2,7 @@ package com.yviet.app.admin.y_viet_admin.service.user;
 
 import com.yviet.app.admin.y_viet_admin.config.security.UserInfoDetails;
 import com.yviet.app.admin.y_viet_admin.config.security.jwt.JwtUtil;
+import com.yviet.app.admin.y_viet_admin.dto.request.admin_user.LoginRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -26,7 +27,8 @@ public class UserServiceImpl implements UserService {
         // Converting UserEntity to UserDetails
 //        return userEntity.map(UserInfoDetails::new)
 //                .orElseThrow(() -> new UsernameNotFoundException("User not found "));
-        UserInfoDetails userInfoDetails = new UserInfoDetails();
+        LoginRequest loginRequest = new LoginRequest("admin", encoder.encode(email));
+        UserInfoDetails userInfoDetails = new UserInfoDetails(loginRequest);
         return userInfoDetails;
     }
 
