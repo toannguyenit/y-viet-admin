@@ -42,7 +42,6 @@ public class UserServiceImpl implements UserService {
 //        } catch (Exception e) {
 //            throw new Exception(e.getMessage());
 //        }
-
         return jwtUtil.generateToken(email);
     }
 }

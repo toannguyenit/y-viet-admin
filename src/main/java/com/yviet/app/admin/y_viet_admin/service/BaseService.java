@@ -10,5 +10,4 @@ public interface BaseService<E, I, O, U> {
     Optional<O> delete(String id);
 
     Optional<?> updateInfor(String id,U u);
-
 }
